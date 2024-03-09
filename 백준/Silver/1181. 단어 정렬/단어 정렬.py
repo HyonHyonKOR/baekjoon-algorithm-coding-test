@@ -1,12 +1,11 @@
-TC= int(input())
-set = set()
+test_case = int(input())
+before_sort = [input() for _ in range(test_case)]
 
-for _ in range(TC):
-    word = input()
-    set.add(word)
-  
-list = list(set)
-answer_list = sorted(list, key= lambda x: (len(x),x))
+before_sort_set = set(before_sort)
+before_sort = list(before_sort_set)
 
-for i in answer_list:
-    print(i)  
+after_sort = sorted(before_sort)
+after_sort.sort(key =len)
+
+for i in after_sort:
+    print(i)
